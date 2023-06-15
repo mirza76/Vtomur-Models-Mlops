@@ -1,0 +1,20 @@
+$ dvc init
+
+$ dvc add Dataset/Train
+
+$ git add 'Dataset\.gitignore' 'Dataset\Train.dvc'
+
+
+$ dvc add Dataset/Test
+
+
+$ git add 'Dataset\.gitignore' 'Dataset\Test.dvc'
+
+
+$ dvc remote add -d storage gdrive://1Ftoz4Hs-FudaPDeDSk5LMOWCTKQ3OPly
+
+
+$ git commit .dvc/config -m "Configure remote sotrage"
+
+
+$ dvc push
